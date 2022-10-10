@@ -1,13 +1,20 @@
-using System.Reflection.Emit;
+using Microsoft.EntityFrameworkCore;
 
 namespace Leonardo.Tests;
 
-public class UnitTest1
+public class LeonardoUnitTest
 {
     [Fact]
-    public static void Execute6ShouldReturn8()
+    public async Task Execute66ShouldReturn8()
     {
-        var res =  Fib.RunAsync(new[] { "6" });
-        Assert.Equal(8,res[0]);
+        var builder = new DbContextOptionsBuilder<FibonacciDataContext>();
+        var dataBaseName = Guid.NewGuid().ToString();
+        builder.UseInMemoryDatabase(dataBaseName);
+        var options = builder.Options;
+        var fibonacciDataContext = new FibonacciDataContext(options);
+        await fibonacciDataContext.Database.EnsureCreatedAsync(); 
+
+        var result = await new Fibonacci(fibonacciDataContext).RunAsync(new[] { "6" });
+        Assert.Equal(8, result[0]);
     }
 }

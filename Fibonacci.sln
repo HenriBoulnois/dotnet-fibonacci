@@ -4,6 +4,21 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 VisualStudioVersion = 17.0.31903.59
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{C6806EFB-570C-4ED3-B9D9-ACDC4AC071F0}"
+	ProjectSection(SolutionItems) = preProject
+		src\WebApi\appsettings.Development.json = src\WebApi\appsettings.Development.json
+		src\WebApi\appsettings.json = src\WebApi\appsettings.json
+		src\WebApi\Controllers\FibonacciController.cs = src\WebApi\Controllers\FibonacciController.cs
+		src\WebApi\Controllers\WeatherForecastController.cs = src\WebApi\Controllers\WeatherForecastController.cs
+		src\WebApi\obj\project.assets.json = src\WebApi\obj\project.assets.json
+		src\WebApi\obj\project.nuget.cache = src\WebApi\obj\project.nuget.cache
+		src\WebApi\obj\WebApi.csproj.nuget.dgspec.json = src\WebApi\obj\WebApi.csproj.nuget.dgspec.json
+		src\WebApi\obj\WebApi.csproj.nuget.g.props = src\WebApi\obj\WebApi.csproj.nuget.g.props
+		src\WebApi\obj\WebApi.csproj.nuget.g.targets = src\WebApi\obj\WebApi.csproj.nuget.g.targets
+		src\WebApi\Program.cs = src\WebApi\Program.cs
+		src\WebApi\Properties\launchSettings.json = src\WebApi\Properties\launchSettings.json
+		src\WebApi\WeatherForecast.cs = src\WebApi\WeatherForecast.cs
+		src\WebApi\WebApi.csproj = src\WebApi\WebApi.csproj
+	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Demo", "src\Demo\Demo.csproj", "{EB9E9947-7A25-4B6A-8A7F-E7B9D75D421A}"
 EndProject
